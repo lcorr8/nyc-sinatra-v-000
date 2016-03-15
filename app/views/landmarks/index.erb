@@ -1,1 +1,10 @@
-#view page for all the landmarks
+<h1>Landmarks</h1>
+
+<% @landmarks.each do |landmark| %>
+ <h3>name: <a href="/landmarks/<%= landmark.id%>"><%= landmark.name %>
+ year: <%= landmark.year_completed %>
+ </a></h3>
+<% end %>
+
+<a class="button" href="landmarks/new">New LANDMARK HERE</a>
+<a class="button" href="/figures">View Figures</a>
